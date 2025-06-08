@@ -1,0 +1,177 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: hsl(210, 10%, 16%);
+  --foreground: hsl(0, 0%, 98%);
+  --muted: hsl(210, 6%, 25%);
+  --muted-foreground: hsl(210, 5%, 60%);
+  --popover: hsl(210, 12%, 12%);
+  --popover-foreground: hsl(0, 0%, 98%);
+  --card: hsl(210, 12%, 12%);
+  --card-foreground: hsl(0, 0%, 98%);
+  --border: hsl(210, 6%, 25%);
+  --input: hsl(210, 6%, 25%);
+  --primary: hsl(264, 68%, 66%);
+  --primary-foreground: hsl(211, 100%, 99%);
+  --secondary: hsl(342, 92%, 74%);
+  --secondary-foreground: hsl(0, 0%, 98%);
+  --accent: hsl(177, 100%, 40%);
+  --accent-foreground: hsl(0, 0%, 98%);
+  --destructive: hsl(0, 62.8%, 30.6%);
+  --destructive-foreground: hsl(0, 0%, 98%);
+  --ring: hsl(264, 68%, 66%);
+  --radius: 0.5rem;
+  --surface: hsl(210, 8%, 44%);
+  --success: hsl(164, 100%, 36%);
+  --dark: hsl(210, 20%, 12%);
+  --dark-light: hsl(210, 15%, 16%);
+}
+
+.dark {
+  --background: hsl(210, 10%, 16%);
+  --foreground: hsl(0, 0%, 98%);
+  --muted: hsl(210, 6%, 25%);
+  --muted-foreground: hsl(210, 5%, 60%);
+  --popover: hsl(210, 12%, 12%);
+  --popover-foreground: hsl(0, 0%, 98%);
+  --card: hsl(210, 12%, 12%);
+  --card-foreground: hsl(0, 0%, 98%);
+  --border: hsl(210, 6%, 25%);
+  --input: hsl(210, 6%, 25%);
+  --primary: hsl(264, 68%, 66%);
+  --primary-foreground: hsl(211, 100%, 99%);
+  --secondary: hsl(342, 92%, 74%);
+  --secondary-foreground: hsl(0, 0%, 98%);
+  --accent: hsl(177, 100%, 40%);
+  --accent-foreground: hsl(0, 0%, 98%);
+  --destructive: hsl(0, 62.8%, 30.6%);
+  --destructive-foreground: hsl(0, 0%, 98%);
+  --ring: hsl(264, 68%, 66%);
+  --surface: hsl(210, 8%, 44%);
+  --success: hsl(164, 100%, 36%);
+  --dark: hsl(210, 20%, 12%);
+  --dark-light: hsl(210, 15%, 16%);
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply font-sans antialiased;
+    background: var(--background);
+    color: var(--foreground);
+    font-family: 'Inter', sans-serif;
+  }
+
+  .font-poppins {
+    font-family: 'Poppins', sans-serif;
+  }
+
+  .font-mono {
+    font-family: 'JetBrains Mono', monospace;
+  }
+
+  .bg-primary {
+    background-color: var(--primary);
+  }
+
+  .bg-secondary {
+    background-color: var(--secondary);
+  }
+
+  .bg-accent {
+    background-color: var(--accent);
+  }
+
+  .bg-surface {
+    background-color: var(--surface);
+  }
+
+  .bg-success {
+    background-color: var(--success);
+  }
+
+  .bg-dark {
+    background-color: var(--dark);
+  }
+
+  .bg-dark-light {
+    background-color: var(--dark-light);
+  }
+
+  .text-primary {
+    color: var(--primary);
+  }
+
+  .text-secondary {
+    color: var(--secondary);
+  }
+
+  .text-accent {
+    color: var(--accent);
+  }
+
+  .text-surface {
+    color: var(--surface);
+  }
+
+  .text-success {
+    color: var(--success);
+  }
+
+  .border-surface {
+    border-color: var(--surface);
+  }
+
+  .hover\:bg-primary:hover {
+    background-color: var(--primary);
+  }
+
+  .hover\:bg-secondary:hover {
+    background-color: var(--secondary);
+  }
+
+  .hover\:bg-accent:hover {
+    background-color: var(--accent);
+  }
+
+  .gradient-primary {
+    background: linear-gradient(135deg, var(--primary), var(--secondary));
+  }
+
+  .gradient-accent {
+    background: linear-gradient(135deg, var(--accent), var(--primary));
+  }
+
+  .gradient-secondary {
+    background: linear-gradient(135deg, var(--secondary), var(--primary));
+  }
+}
+
+@layer components {
+  .waveform-bar {
+    @apply bg-primary rounded-sm transition-all duration-75;
+  }
+
+  .waveform-bar.secondary {
+    @apply bg-secondary;
+  }
+
+  .waveform-bar.accent {
+    @apply bg-accent;
+  }
+
+  .btn-gradient {
+    background: linear-gradient(135deg, var(--primary), var(--secondary));
+    @apply hover:opacity-80 transition-opacity;
+  }
+
+  .btn-gradient-accent {
+    background: linear-gradient(135deg, var(--accent), var(--primary));
+    @apply hover:opacity-80 transition-opacity;
+  }
+}
